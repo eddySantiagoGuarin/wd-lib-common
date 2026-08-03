@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "ms-auth-identityservice"
+		},
+		{
+			"path": "ms-enrollment"
+		},
+		{
+			"path": "ms-event-category"
+		},
+		{
+			"path": "ms-scoring-evaluation"
+		},
+		{
+			"path": "wd-lib-common"
+		}
+	]
+}
