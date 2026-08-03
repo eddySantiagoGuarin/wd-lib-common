@@ -4,10 +4,8 @@ import java.time.Instant;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import jakarta.persistence.Entity;
 import lombok.Data;
 
-@Entity
 @Data
 public class Timestamps {
  

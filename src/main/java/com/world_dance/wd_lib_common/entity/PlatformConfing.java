@@ -3,10 +3,8 @@ package com.world_dance.wd_lib_common.entity;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import jakarta.persistence.Entity;
 import lombok.Data;
 
-@Entity
 @Data
 public class PlatformConfing {
     

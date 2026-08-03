@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class streamPublicResponseDto {
+public class StreamPublicResponseDto {
 
     private String id ;
 

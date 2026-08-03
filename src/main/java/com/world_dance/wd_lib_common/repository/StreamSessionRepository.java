@@ -14,5 +14,5 @@ public interface StreamSessionRepository extends MongoRepository<StreamSession,S
 
     List<StreamSession>findByStatus(String status);
 
-    boolean existsByEventId(String eventId);
+    boolean existsByEventId(Long eventId);
 }
