@@ -1,19 +1,34 @@
 package com.world_dance.wd_lib_common.dto;
 
-import lombok.Data;
+import java.time.LocalDateTime;
 
-import lombok.RequiredArgsConstructor;
+import com.world_dance.wd_lib_common.enums.EnrollmentStatus;
+import com.world_dance.wd_lib_common.enums.EventRole;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 
 @Data
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class EnrollmentResponseDto {
-    
-    private Long id;
+
+    private Long enrollmentId;
+
     private Long userId;
+
     private Long eventId;
-    private Long categoryId;
-    private String musicUrl;
-    private String status;
-    private String rejectionReason;
+
+    private Long modalityId;
+
+    private EventRole roleInEvent;
+
+    private EnrollmentStatus status;
+    
+    private LocalDateTime createdAt;
     
 }
