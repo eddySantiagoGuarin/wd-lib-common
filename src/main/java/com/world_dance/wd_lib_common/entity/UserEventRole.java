@@ -1,13 +1,16 @@
 package com.world_dance.wd_lib_common.entity;
 
+import com.world_dance.wd_lib_common.enums.EventRole;
 import com.world_dance.wd_lib_common.enums.RoleInEvent;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Table(name = "user_event_roles")
-@RequiredArgsConstructor
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
+@Builder
 public class UserEventRole {
 
     @Id
@@ -22,5 +25,5 @@ public class UserEventRole {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "role_in_event", nullable = false)
-    private RoleInEvent roleInEvent;
+    private EventRole roleInEvent;
 }
