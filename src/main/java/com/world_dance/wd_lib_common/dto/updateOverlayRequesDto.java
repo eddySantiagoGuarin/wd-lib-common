@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class updateOverlayRequesDto {
+public class UpdateOverlayRequesDto {
     
     @NotBlank(message="El id del turno activo es obligatorio")
     private String currentSlotId ;
