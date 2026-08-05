@@ -18,7 +18,7 @@ public class StreamAdminResponseDto {
     private String id ;
 
     @NotBlank(message="La id del evento es obligatoria")
-    private String eventId ;
+    private Long eventId ;
     
     @Valid
     @NotNull(message="El estado de la trasmision es obligatorio")
