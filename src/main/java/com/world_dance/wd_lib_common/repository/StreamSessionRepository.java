@@ -11,7 +11,7 @@ import com.world_dance.wd_lib_common.enums.StatusStream;
 
 public interface StreamSessionRepository extends MongoRepository<StreamSession,String>{
     
-    Optional<StreamSession> findByEventId(Long eventId);
+    Optional<StreamSession> findByEventId(Long eventId);    
 
     List<StreamSession> findByStatusStream(StatusStream statusStream);
 
