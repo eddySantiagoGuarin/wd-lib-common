@@ -28,4 +28,11 @@ public class StreamSession {
 
     private Timestamps timestamps ;
 
+    private String streamKey;
+    
+    private String rtmpUrl;
+
+    
+    private KickOAuthToken kickOAuthToken;
+
 }
