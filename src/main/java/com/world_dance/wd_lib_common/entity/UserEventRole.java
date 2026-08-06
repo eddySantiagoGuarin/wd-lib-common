@@ -1,14 +1,13 @@
 package com.world_dance.wd_lib_common.entity;
 
 import com.world_dance.wd_lib_common.enums.EventRole;
-import com.world_dance.wd_lib_common.enums.RoleInEvent;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Table(name = "user_event_roles")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Builder
 public class UserEventRole {
