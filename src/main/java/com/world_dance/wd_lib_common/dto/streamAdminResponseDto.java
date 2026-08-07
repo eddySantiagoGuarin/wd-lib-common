@@ -32,6 +32,12 @@ public class StreamAdminResponseDto {
     
     @NotBlank(message="La direccion para meter el <iframe> del chat es obligatoria")
     private String chatIframeUrl ;
+
+    @NotBlank(message="La direccion para la trasmicion es obligatoria")
+    private String rtmpUrl;
+    
+    @NotBlank(message="La clave de la trasmicion es obligatoria")
+    private String streamKey;
     
     @Valid
     @NotNull(message="La informacion del turno es obligatoria")
