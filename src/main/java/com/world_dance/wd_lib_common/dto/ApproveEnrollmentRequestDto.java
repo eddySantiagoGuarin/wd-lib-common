@@ -20,4 +20,10 @@ public class ApproveEnrollmentRequestDto {
     @NotNull(message = "El estado de la inscripción es obligatorio")
     private EnrollmentStatus status;
 
+    /**
+     * Obligatorio solo cuando status = REJECTED (RF-28).
+     * Se valida en el service, no aquí, porque solo aplica condicionalmente.
+     */
+    private String reason;
+
 }

@@ -24,6 +24,10 @@ public class Enrollment {
     @Column(name = "event_id", nullable = false)
     private Long eventId;
 
+    
+    @Column(name = "reason", length = 255)
+    private String reason;
+
     @Column(name = "modality_id", nullable = false)
     private Long modalityId;
 
