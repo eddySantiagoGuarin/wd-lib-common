@@ -5,10 +5,11 @@ import com.world_dance.wd_lib_common.enums.EventRole;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -26,23 +27,5 @@ public class EnrollmentRequestDto {
     @NotNull(message = "El rol en el evento es obligatorio.")
     private EventRole roleInEvent;
 
-    public Long getUserId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUserId'");
-    }
-
-    public Long getEventId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEventId'");
-    }
-
-    public EventRole getRoleInEvent() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getRoleInEvent'");
-    }
-
-    public Long getModalityId() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getModalityId'");
-    }
+    
 }

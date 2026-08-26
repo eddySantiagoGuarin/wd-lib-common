@@ -17,4 +17,5 @@ public interface ModalityRepository extends JpaRepository<Modality, Long>{
 
     List<Modality> findByEventId(Long eventId);
 
+    List<Modality> findByCategory(Category category);
 }
