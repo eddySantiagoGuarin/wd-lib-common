@@ -13,7 +13,7 @@ public interface ModalityRepository extends JpaRepository<Modality, Long>{
 
     boolean existsByCategoryAndDivisionAndMinAgeAndMaxAge(Category category, Division division, Long minAge, Long maxAge);
 
-    Modality findById(long modalityId);
+    boolean existsByEventIdAndCategoryAndDivisionAndMinAgeAndMaxAge(Long eventId, Category category, Division division, Long minAge, Long maxAge);
 
     List<Modality> findByEventId(Long eventId);
 
