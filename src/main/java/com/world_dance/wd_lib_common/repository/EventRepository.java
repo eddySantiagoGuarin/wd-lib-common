@@ -10,8 +10,6 @@ public interface EventRepository extends JpaRepository<Event, Long>{
 
     Event findByName(String name);
 
-    Event findById(long eventId);
-
     boolean existsById(long eventId);
     
 }
