@@ -23,6 +23,14 @@ public class GlobalExceptionHandler {
         return ResponseEntity.badRequest().body(error);
     }
 
+    @ExceptionHandler(SecurityException.class)
+    public ResponseEntity<ExceptionDto> handleSecurityException(SecurityException ex) {
+        ExceptionDto error = new ExceptionDto();
+        error.setMessage(ex.getMessage());
+
+        return ResponseEntity.badRequest().body(error);
+    }
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ExceptionDto> handleValidationErrors(MethodArgumentNotValidException ex) {
         ExceptionDto error = new ExceptionDto();
