@@ -15,41 +15,42 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class StreamAdminResponseDto {
     
-    private String id ;
+    private String id;
 
     @NotBlank(message="La id del evento es obligatoria")
-    private Long eventId ;
+    private Long eventId;
     
     @Valid
     @NotNull(message="El estado de la trasmision es obligatorio")
-    private StatusStream statusStream ;
+    private StatusStream statusStream;
     
     @NotBlank(message="El provedor de la trasmicion es obligatorio")
-    private String provider="KICK" ;
+    private String provider = "KICK";
     
     @NotBlank(message="La direccion para meter el <iframe> del video es obligatoria")
-    private String playerIframeUrl ;
+    private String playerIframeUrl;
     
     @NotBlank(message="La direccion para meter el <iframe> del chat es obligatoria")
-    private String chatIframeUrl ;
+    private String chatIframeUrl;
 
     @NotBlank(message="La direccion para la trasmicion es obligatoria")
     private String rtmpUrl;
     
     @NotBlank(message="La clave de la trasmicion es obligatoria")
     private String streamKey;
+
+    private String ingestWhipUrl;
     
     @Valid
     @NotNull(message="La informacion del turno es obligatoria")
-    private LiveOverlayData liveOverlayData ;
+    private LiveOverlayData liveOverlayData;
     
     @Valid
     @NotNull(message="La informacion de la grabacion es obligatoria")
-    private VodInfo vodInfo ;
+    private VodInfo vodInfo;
 
     @NotBlank(message="La url del canal es oblihatoria")
-    private String channelUrl ;
+    private String channelUrl;
 
-    private Timestamps timestamps ;
-
+    private Timestamps timestamps;
 }
