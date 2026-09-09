@@ -39,7 +39,7 @@ public class StreamAdminResponseDto {
     @NotBlank(message="La clave de la trasmicion es obligatoria")
     private String streamKey;
 
-    private String ingestWhipUrl;
+    private String ingestUrl;
     
     @Valid
     @NotNull(message="La informacion del turno es obligatoria")
