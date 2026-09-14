@@ -29,10 +29,17 @@ public class StreamSession {
     private Timestamps timestamps ;
 
     private String streamKey;
-    
+
     private String rtmpUrl;
 
-    
+    private String channelUrl;
+
+    /** Título propio de la sesión de transmisión (distinto del nombre del evento en ms-event-category). */
+    private String title;
+
+    private String description;
+
+
     private KickOAuthToken kickOAuthToken;
 
 }

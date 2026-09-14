@@ -4,7 +4,6 @@ package com.world_dance.wd_lib_common.dto;
 import java.time.Instant;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -26,7 +25,7 @@ public class CreateStreamSessionRequestDto {
     @NotBlank(message="La clave de la transmision es obligatoria")
     private String streamKey;
     
-    @NotNull(message="La fecha y hora programada para la transmision es obligatoria")
+    /** Ya no se captura en el formulario de creación del frontend; queda nulo salvo que un caller externo lo envíe explícitamente. */
     private Instant scheduleFor ;
     
 }

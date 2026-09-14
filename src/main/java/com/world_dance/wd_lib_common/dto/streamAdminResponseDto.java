@@ -1,5 +1,7 @@
 package com.world_dance.wd_lib_common.dto;
 
+import java.time.Instant;
+
 import com.world_dance.wd_lib_common.entity.LiveOverlayData;
 import com.world_dance.wd_lib_common.entity.Timestamps;
 import com.world_dance.wd_lib_common.entity.VodInfo;
@@ -51,6 +53,17 @@ public class StreamAdminResponseDto {
 
     @NotBlank(message="La url del canal es oblihatoria")
     private String channelUrl;
+
+    /** Título propio de la sesión de transmisión (distinto del nombre del evento en ms-event-category). */
+    private String title;
+
+    private String description;
+
+    /** true si hay un token OAuth de Kick guardado y todavía no ha expirado (ver KickOAuthToken.expiresIn). */
+    private Boolean kickTokenLinked;
+
+    /** Momento exacto de expiración del token (obtainedAt + expiresIn); null si nunca se vinculó. */
+    private Instant kickTokenExpiresAt;
 
     private Timestamps timestamps;
 }
