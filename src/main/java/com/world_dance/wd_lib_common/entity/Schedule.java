@@ -32,6 +32,7 @@ public class Schedule {
     @Column(name = "updated_at", insertable = false, updatable = false)
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "scheduleId", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "schedule_id", updatable = false, insertable = false)
     private List<PresentationSlot> presentationSlots;
 }
