@@ -26,6 +26,14 @@ public class ScheduleGenerationRequestDto {
 
     private String sortingStrategy = "NEWEST_FIRST";
 
+    /**
+     * Orden deseado de las modalidades (lista de ids de modalidad) al asignar los
+     * turnos del cronograma. Opcional: si se omite o viene vacía, se usa el orden
+     * por defecto (división SOLO/DUET/GROUP y luego categoría). Las modalidades
+     * del evento que no estén en esta lista se agregan al final.
+     */
+    private List<Long> modalityOrder;
+
     private List<String> stageNames;
 
     private String notes;

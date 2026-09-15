@@ -30,6 +30,15 @@ public class PresentationSlot {
     @Column(name = "estimated_time")
     private LocalTime estimatedTime;
 
+    @Column(name = "stage")
+    private String stage;
+
+    @Column(name = "duration_minutes")
+    private Integer durationMinutes;
+
+    @Column(name = "notes", columnDefinition = "TEXT")
+    private String notes;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private SlotStatus status;

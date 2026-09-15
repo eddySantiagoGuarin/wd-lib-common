@@ -28,7 +28,9 @@ public class EnrollmentResponseDto {
     private EventRole roleInEvent;
 
     private EnrollmentStatus status;
-    
+
     private LocalDateTime createdAt;
-    
+
+    private ParticipantSummaryDto participant;
+
 }
