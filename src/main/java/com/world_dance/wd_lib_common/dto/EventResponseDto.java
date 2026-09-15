@@ -14,7 +14,7 @@ public class EventResponseDto {
     /**
      * Este es el id del evento
      */
-    private Long IdEvent;
+    private Long idEvent;
 
     /**
      * Este es el id del organizador
