@@ -16,53 +16,62 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 public class StreamAdminResponseDto {
-    
+
     private String id;
 
-    @NotBlank(message="La id del evento es obligatoria")
+    @NotBlank(message = "La id del evento es obligatoria")
     private Long eventId;
-    
+
     @Valid
-    @NotNull(message="El estado de la trasmision es obligatorio")
+    @NotNull(message = "El estado de la trasmision es obligatorio")
     private StatusStream statusStream;
-    
-    @NotBlank(message="El provedor de la trasmicion es obligatorio")
+
+    @NotBlank(message = "El provedor de la trasmicion es obligatorio")
     private String provider = "KICK";
-    
-    @NotBlank(message="La direccion para meter el <iframe> del video es obligatoria")
+
+    @NotBlank(message = "La direccion para meter el <iframe> del video es obligatoria")
     private String playerIframeUrl;
-    
-    @NotBlank(message="La direccion para meter el <iframe> del chat es obligatoria")
+
+    @NotBlank(message = "La direccion para meter el <iframe> del chat es obligatoria")
     private String chatIframeUrl;
 
-    @NotBlank(message="La direccion para la trasmicion es obligatoria")
+    @NotBlank(message = "La direccion para la trasmicion es obligatoria")
     private String rtmpUrl;
-    
-    @NotBlank(message="La clave de la trasmicion es obligatoria")
+
+    @NotBlank(message = "La clave de la trasmicion es obligatoria")
     private String streamKey;
 
     private String ingestUrl;
-    
+
     @Valid
-    @NotNull(message="La informacion del turno es obligatoria")
+    @NotNull(message = "La informacion del turno es obligatoria")
     private LiveOverlayData liveOverlayData;
-    
+
     @Valid
-    @NotNull(message="La informacion de la grabacion es obligatoria")
+    @NotNull(message = "La informacion de la grabacion es obligatoria")
     private VodInfo vodInfo;
 
-    @NotBlank(message="La url del canal es oblihatoria")
+    @NotBlank(message = "La url del canal es oblihatoria")
     private String channelUrl;
 
-    /** Título propio de la sesión de transmisión (distinto del nombre del evento en ms-event-category). */
+    /**
+     * Título propio de la sesión de transmisión (distinto del nombre del evento en
+     * ms-event-category).
+     */
     private String title;
 
     private String description;
 
-    /** true si hay un token OAuth de Kick guardado y todavía no ha expirado (ver KickOAuthToken.expiresIn). */
+    /**
+     * true si hay un token OAuth de Kick guardado y todavía no ha expirado (ver
+     * KickOAuthToken.expiresIn).
+     */
     private Boolean kickTokenLinked;
 
-    /** Momento exacto de expiración del token (obtainedAt + expiresIn); null si nunca se vinculó. */
+    /**
+     * Momento exacto de expiración del token (obtainedAt + expiresIn); null si
+     * nunca se vinculó.
+     */
     private Instant kickTokenExpiresAt;
 
     private Timestamps timestamps;
