@@ -1,6 +1,7 @@
 package com.world_dance.wd_lib_common.dto;
 
 import java.time.Instant;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -55,4 +56,20 @@ public class MusicTrackResponseDto {
      * Fecha y hora en que fue subida o actualizada la pista
      */
     private Instant uploadedAt;
+
+    /**
+     * Historial de versiones reemplazadas de la pista (más antigua primero).
+     * No incluye el identificador interno de almacenamiento (gridFsId), solo
+     * lo relevante para mostrarlo a quien gestiona la inscripción.
+     */
+    private List<HistoryEntryDto> history;
+
+    @Data
+    @Builder
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class HistoryEntryDto {
+        private String previousFilename;
+        private Instant replacedAt;
+    }
 }
